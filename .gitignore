@@ -1,0 +1,5 @@
+# Postgres data directory
+/postgres-data
+
+# MacOS
+.DS_Store
