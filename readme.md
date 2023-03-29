@@ -2,9 +2,8 @@
 
 project written in Go
 
-### Testing
 #### To run unit tests
 > go test -v ./...
 
-#### To run unit tests
+#### To run integration tests
 > go test -v -tags=integration ./...
