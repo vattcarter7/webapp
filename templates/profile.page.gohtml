@@ -8,21 +8,34 @@
       <hr />
 
       {{if ne .User.ProfilePic.FileName ""}}
-        <img class="image-fluid" style="max-width: 300px;" src="/static/img/{{.User.ProfilePic.FileName}}" alt="profile" />
+      <img
+        class="img-fluid"
+        style="max-width: 300px"
+        src="/static/img/{{.User.ProfilePic.FileName}}"
+        alt="profile"
+      />
       {{else}}
-        <p>No profile image uploaded yet...</p>
-      {{end}}
+      <p>No profile image uploaded yet...</p>
+      {{ end }}
 
       <hr />
+
       <form
         action="/user/upload-profile-pic"
         method="post"
         enctype="multipart/form-data"
       >
-      <label for="formFile" class="form-label">Choose an image</label>
-      <input type="file" class="form-control" id="formFile" accept="image/gif,image/jpg,image/png">
-      <input type="submit" class="btn btn-primary mt-3" value="Upload">
-    </form>
+        <label for="formFile" class="form-label">Choose an image</label>
+        <input
+          class="form-control"
+          type="file"
+          name="image"
+          id="formFile"
+          accept="image/gif,image/jpeg,image/png"
+        />
+
+        <input class="btn btn-primary mt-3" type="submit" value="Upload" />
+      </form>
     </div>
   </div>
 </div>

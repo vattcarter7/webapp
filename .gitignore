@@ -3,3 +3,6 @@
 
 # MacOS
 .DS_Store
+
+static/img/*
+cmd/web/testdata/uploads/*
